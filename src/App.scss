@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600&display=swap');
+
+:root {
+    --Lime-Green: hsl(163, 72%, 41%);
+    //Primary
+
+    --Soft-Cyan : hsl(174, 77%, 80%);
+    --Strong-Cyan : hsl(174, 86%, 45%);
+    --Light-Grayish-Red : hsl(14, 92%, 95%);
+    --Light-Red : hsl(15, 100%, 70%);
+    --Pale-Blue : hsl(226, 100%, 87%);
+
+    //Neutral
+
+    --White : hsl(0, 0%, 100%);
+    --Very-Pale-Blue : hsl(230, 100%, 99%);
+    --Light-Grayish-Blue : hsl(224, 65%, 95%);
+    --Light-Grayish-Blue : hsl(223, 50%, 87%);
+    --Grayish-Blue : hsl(225, 20%, 60%);
+    --Dark-Desaturated-Blue : hsl(227, 35%, 25%);
+    
+}
+
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin flexCenter($direction) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+@mixin gridCenter {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+    @include flexCenter(column);
+    background-image: url(../images/bg-pattern.svg);
+    background-repeat: no-repeat;
+    header {
+        @include flexCenter(column);
+        font-family: 'Manrope', sans-serif;
+        h1 {
+            font-weight: 800;
+            padding-block: 10px;
+        }
+        p {
+            font-style: normal;
+            color: var(--Grayish-Blue);
+        }
+    }
+    main {
+        @include flexCenter(column);
+        max-width: 500px;
+        margin-block: 50px;
+        background-color: white;
+        position: relative;
+        font-family: 'Manrope', sans-serif;
+        p {
+            font-style: normal;
+            color: var(--Grayish-Blue);
+        }
+        .price {
+            @include flexCenter(row);
+            width: 100%;
+            justify-content: space-between;
+            padding-inline: 40px;
+            padding-block: 20px;
+            P  {
+                font-weight: 600;
+            }
+            #bold {
+                position: relative;
+                font-size: 40px;
+                color: black;
+                &::after {
+                    content: "/month";
+                    position: relative;
+                    font-size: 20px;
+
+                }
+            }
+        }
+        .billing {
+            @include flexCenter(row);
+            gap: 10px;
+            margin-block: 20px;
+        }
+        .perks {
+            @include flexCenter(row);
+            width: 100%;
+            justify-content: space-between;
+            padding-inline: 40px;
+            div {
+                font-style: normal;
+                color: var(--Grayish-Blue);
+            }
+        }
+    }
+} 
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
