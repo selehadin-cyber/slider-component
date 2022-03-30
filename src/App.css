@@ -36,6 +36,13 @@ body header {
   align-items: center;
   flex-direction: column;
   font-family: "Manrope", sans-serif;
+  position: relative;
+  margin-block: 50px;
+}
+body header img {
+  position: absolute;
+  top: -39px;
+  z-index: -1;
 }
 body header h1 {
   font-weight: 800;
@@ -84,8 +91,9 @@ body main .price #bold {
 body main .price #bold::after {
   content: " / month";
   position: relative;
-  font-size: 20px;
+  font-size: 15px;
   top: -5px;
+  color: var(--Grayish-Blue);
 }
 body main .billing {
   display: flex;
@@ -126,9 +134,9 @@ body main .perks div {
 body main .perks button {
   font-weight: 600;
   color: white;
-  width: 150px;
+  width: 160px;
   background-color: var(--Dark-Desaturated-Blue);
-  padding: 15px;
+  padding: 13px;
   box-shadow: 0 1rem 1.5rem rgba(31, 47, 86, 0.2);
   border-radius: 33px;
 }

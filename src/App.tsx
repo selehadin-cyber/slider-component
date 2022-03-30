@@ -2,12 +2,14 @@ import React from "react";
 import "./App.css";
 // @ts-ignore
 import Slider from "./components/Slider";
+import circles from "./pattern-circles.svg";
+
 
 function App() {
   return (
     <div className="App">
       <header>
-        <img src="../images/bg-pattern.svg" alt="circles" />
+        <img src={circles} alt="circles" />
         <h1>Simple, traffic-based pricing</h1>
         <p>Sign-up for our 30-day trial. No credit card
       required.</p>

@@ -48,6 +48,13 @@ body {
     header {
         @include flexCenter(column);
         font-family: 'Manrope', sans-serif;
+        position: relative;
+        margin-block: 50px;
+        img {
+            position: absolute;
+            top: -39px;
+            z-index: -1;
+        }
         h1 {
             font-weight: 800;
             padding-block: 10px;
@@ -87,9 +94,9 @@ body {
                 &::after {
                     content: " / month";
                     position: relative;
-                    font-size: 20px;
+                    font-size: 15px;
                     top: -5px;
-
+                    color: var(--Grayish-Blue);
                 }
             }
         }
@@ -124,9 +131,9 @@ body {
             button {
                 font-weight: 600;
                 color: white;  
-                width: 150px;
+                width: 160px;
                 background-color: var(--Dark-Desaturated-Blue);
-                padding: 15px;
+                padding: 13px;
                 box-shadow: 0 1rem 1.5rem rgba(hsl(223, 47%, 23%), .2);
                 border-radius: 33px;
             }

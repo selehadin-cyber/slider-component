@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Slider.css";
 import Toggle from "./Toggle";
 import { ThemeProvider } from "styled-components";
-import { GlobalStyles, darkTheme, LightTheme } from "./Themes";
+import { darkTheme, LightTheme } from "./Themes";
 import icon from "./icon-check.svg";
 
 function Slider() {
