@@ -28,6 +28,7 @@ body {
   flex-direction: column;
   background-image: url(../images/bg-pattern.svg);
   background-repeat: no-repeat;
+  background-color: var(--Very-Pale-Blue);
 }
 body header {
   display: flex;
@@ -43,6 +44,7 @@ body header h1 {
 body header p {
   font-style: normal;
   color: var(--Grayish-Blue);
+  font-size: 15px;
 }
 body main {
   display: flex;
@@ -54,6 +56,8 @@ body main {
   background-color: white;
   position: relative;
   font-family: "Manrope", sans-serif;
+  box-shadow: 0 1rem 1.5rem rgba(31, 47, 86, 0.2);
+  border-radius: 7px;
 }
 body main p {
   font-style: normal;
@@ -78,9 +82,10 @@ body main .price #bold {
   color: black;
 }
 body main .price #bold::after {
-  content: "/month";
+  content: " / month";
   position: relative;
   font-size: 20px;
+  top: -5px;
 }
 body main .billing {
   display: flex;
@@ -89,6 +94,12 @@ body main .billing {
   flex-direction: row;
   gap: 10px;
   margin-block: 20px;
+  font-size: 14px;
+}
+body main .billing small {
+  align-self: flex-end;
+  color: var(--Light-Red);
+  background-color: var(--Light-Grayish-Red);
 }
 body main .perks {
   display: flex;
@@ -98,10 +109,28 @@ body main .perks {
   width: 100%;
   justify-content: space-between;
   padding-inline: 40px;
+  gap: 100px;
+  -webkit-padding-after: 40px;
+          padding-block-end: 40px;
+}
+body main .perks .left {
+  font-size: 13px;
+}
+body main .perks .left div {
+  margin-bottom: 7px;
 }
 body main .perks div {
   font-style: normal;
   color: var(--Grayish-Blue);
+}
+body main .perks button {
+  font-weight: 600;
+  color: white;
+  width: 150px;
+  background-color: var(--Dark-Desaturated-Blue);
+  padding: 15px;
+  box-shadow: 0 1rem 1.5rem rgba(31, 47, 86, 0.2);
+  border-radius: 33px;
 }
 
 .attribution {

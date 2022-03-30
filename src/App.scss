@@ -44,6 +44,7 @@ body {
     @include flexCenter(column);
     background-image: url(../images/bg-pattern.svg);
     background-repeat: no-repeat;
+    background-color: var(--Very-Pale-Blue);
     header {
         @include flexCenter(column);
         font-family: 'Manrope', sans-serif;
@@ -54,6 +55,7 @@ body {
         p {
             font-style: normal;
             color: var(--Grayish-Blue);
+            font-size: 15px;
         }
     }
     main {
@@ -63,6 +65,8 @@ body {
         background-color: white;
         position: relative;
         font-family: 'Manrope', sans-serif;
+        box-shadow: 0 1rem 1.5rem rgba(hsl(223, 47%, 23%), .2);
+        border-radius: 7px;
         p {
             font-style: normal;
             color: var(--Grayish-Blue);
@@ -81,9 +85,10 @@ body {
                 font-size: 40px;
                 color: black;
                 &::after {
-                    content: "/month";
+                    content: " / month";
                     position: relative;
                     font-size: 20px;
+                    top: -5px;
 
                 }
             }
@@ -92,15 +97,38 @@ body {
             @include flexCenter(row);
             gap: 10px;
             margin-block: 20px;
+            font-size: 14px;
+            small {
+                align-self:  flex-end;
+                color: var(--Light-Red);
+                background-color: var(--Light-Grayish-Red);
+            }
         }
         .perks {
             @include flexCenter(row);
             width: 100%;
             justify-content: space-between;
             padding-inline: 40px;
+            gap: 100px;
+            padding-block-end: 40px;
+            .left {
+                div {
+                    margin-bottom: 7px;
+                }
+                font-size: 13px;
+            }
             div {
                 font-style: normal;
                 color: var(--Grayish-Blue);
+            }
+            button {
+                font-weight: 600;
+                color: white;  
+                width: 150px;
+                background-color: var(--Dark-Desaturated-Blue);
+                padding: 15px;
+                box-shadow: 0 1rem 1.5rem rgba(hsl(223, 47%, 23%), .2);
+                border-radius: 33px;
             }
         }
     }

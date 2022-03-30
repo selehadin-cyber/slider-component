@@ -23,11 +23,11 @@ function Slider() {
             $
             {parseInt(pageVeiws) < 100
               ? billingType === "yearly"
-                ? "14"
-                : "16"
+                ? "14.00"
+                : "16.00"
               : billingType === "yearly"
-              ? "18"
-              : "24"}
+              ? "18.00"
+              : "24.00"}
           </p>
         </div>
         <div className="slideBlock">
